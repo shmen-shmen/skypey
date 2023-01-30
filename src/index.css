@@ -3,9 +3,14 @@
 	src: url(./assets/fonts/Web437_IBM_DOS_ISO9.woff);
 }
 
-body {
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "IBM DOS ISO8", monospace;
+	font-size: 16px;
+}
+
+#root {
+	height: 100vh;
 }
