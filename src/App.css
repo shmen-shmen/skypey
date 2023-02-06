@@ -20,22 +20,6 @@ body {
 	}
 }
 
-.sidebar {
-	width: 80px;
-	background-color: rgba(0, 16, 57, 0.4);
-	border: 4px ridge white;
-	height: 100%;
-	color: white;
-	/* transition: width 0.3s; */
-}
-
-/* not small devices  */
-@media (min-width: 1080px) {
-	.sidebar {
-		width: 320px;
-	}
-}
-
 .main {
 	flex: 1 1 0;
 	height: 100%;
