@@ -1,11 +1,33 @@
-body {
-	background: radial-gradient(
-		circle,
-		rgb(255, 255, 255) 6px,
-		rgb(185, 0, 214) 166px,
-		rgb(0, 46, 132) 1066px
-	);
+html {
+	--toxic-blue: rgb(39, 248, 255);
+	--deep-blue: rgb(0, 34, 63);
+	--deep-blue-translucent: rgb(0, 34, 63, 0.5);
 }
+
+body {
+	/* height: 100%; */
+	background: linear-gradient(black 30%, var(--deep-blue));
+}
+
+/* .stacked-radial {
+	background: radial-gradient(
+			circle at 50% 0,
+			rgba(255, 0, 0, 0.5),
+			rgba(255, 0, 0, 0) 70.71%
+		),
+		radial-gradient(
+			circle at 6.7% 75%,
+			rgba(0, 0, 255, 0.5),
+			rgba(0, 0, 255, 0) 70.71%
+		),
+		radial-gradient(
+				circle at 93.3% 75%,
+				rgba(0, 255, 0, 0.5),
+				rgba(0, 255, 0, 0) 70.71%
+			)
+			beige;
+	border-radius: 50%;
+} */
 
 .App {
 	display: flex;
@@ -22,8 +44,9 @@ body {
 
 .main {
 	flex: 1 1 0;
-	height: 100%;
 	color: white;
-	background-color: rgba(255, 0, 0, 0.33);
-	border: 4px ridge white;
+	border: 8px double var(--toxic-blue);
+}
+.main h2 {
+	font-size: 5rem;
 }

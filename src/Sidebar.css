@@ -1,22 +1,66 @@
 .Sidebar {
-	width: 80px;
-	background-color: rgba(0, 16, 57, 0.4);
-	border: 4px ridge white;
+	width: 120px;
+	border: 8px double var(--toxic-blue);
 	height: 100%;
 	color: white;
-	/* transition: width 0.3s; */
+	overflow: scroll;
+	padding: 1rem;
 }
 
 /* not small devices  */
 @media (min-width: 1080px) {
 	.Sidebar {
-		width: 320px;
+		width: 366px;
 	}
 }
 
-.user-avatar {
-	width: 50px;
-	height: 50px;
-	background-size: 50px;
-	background-position: center;
+.User {
+	margin-bottom: 1rem;
+	display: flex;
+	height: calc(100px);
+	/* background-color: rgba(255, 0, 242, 0.1); */
+	background: linear-gradient(rgba(0, 74, 138, 0.8) 10%, rgba(0, 0, 0, 0) 60%);
+	/* ебани анимацию хули нет */
+	animation-duration: 750ms;
 }
+
+.User-pic {
+	aspect-ratio: 1/1;
+	height: 100%;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.User-info {
+	display: flex;
+	flex-direction: column;
+	flex-basis: calc(100% - 100px);
+	align-content: space-between;
+	padding-left: 1rem;
+}
+
+.User-name h3 {
+	font-size: 1.5rem;
+	text-align: left;
+	color: var(--toxic-blue);
+}
+
+.User-status {
+	display: flex;
+	overflow: hidden;
+	text-align: left;
+}
+
+/* not small devices  */
+/* @media (min-width: 576px) {
+	.User__details {
+		display: block;
+		padding: 0 0 0 1rem;
+	}
+	.User__details-name {
+		margin: 0;
+		color: red;
+		font-size: 1rem;
+	}
+} */
