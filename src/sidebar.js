@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import User from "./User";
 import "./Sidebar.css";
 
@@ -15,15 +15,18 @@ const Sidebar = (props) => {
 };
 
 const User = (props) => {
-	const { user, key } = props;
-
+	const { user } = props;
+	console.log(user["profile_pic"]);
 	return (
 		<div className="User">
 			<h3>{user.name}</h3>
-			<img
-				src={"https://thispersondoesnotexist.com/image"}
-				alt={user.name + " avatar"}
+			<div
+				className="user-avatar"
+				style={{
+					backgroundImage: `url(${user["profile_pic"]})`,
+				}}
 			/>
+			<div />
 		</div>
 	);
 };
