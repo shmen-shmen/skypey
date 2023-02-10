@@ -1,9 +1,8 @@
 import React from "react";
-// import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import store from "./store";
-import Sidebar from "./sidebar";
-import Main from "./main";
+import store from "../store";
+import Sidebar from "../components/sidebar";
+import Main from "../components/main";
 import _ from "lodash";
 
 function App() {

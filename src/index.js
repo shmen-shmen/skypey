@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import store from "./store/index";
-import App from "./App";
+import App from "./containers/App";
 // import registerServiceWorker from "./registerServiceWorker";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
