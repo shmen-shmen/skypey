@@ -8,6 +8,7 @@
 }
 
 /* not small devices  */
+/* это ПОТОМ давай уже пусть сначала прога заработает */
 @media (min-width: 1080px) {
 	.Sidebar {
 		width: 366px;
@@ -18,10 +19,25 @@
 	margin-bottom: 1rem;
 	display: flex;
 	height: calc(100px);
-	/* background-color: rgba(255, 0, 242, 0.1); */
 	background: linear-gradient(rgba(0, 74, 138, 0.8) 10%, rgba(0, 0, 0, 0) 60%);
 	/* ебани анимацию хули нет */
-	animation-duration: 750ms;
+}
+
+@keyframes mouseOver {
+	0% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: red;
+	}
+}
+@keyframes mouseLeave {
+	0% {
+		background-color: red;
+	}
+	100% {
+		background-color: transparent;
+	}
 }
 
 .User-pic {
@@ -50,6 +66,7 @@
 	display: flex;
 	overflow: hidden;
 	text-align: left;
+	margin-bottom: 0.2rem;
 }
 
 /* not small devices  */

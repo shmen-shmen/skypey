@@ -15,16 +15,28 @@ const Sidebar = (props) => {
 
 const User = ({ user }) => {
 	const { name, profile_pic, status } = user;
-	const [background, setBackround] = useState("");
+	const [hovAnim, setHovAnim] = useState({});
+	const mouseOver = {
+		animationName: "mouseOver",
+		backgroundColor: "red",
+		animationDuration: "200ms",
+		animationIterationCount: "1",
+	};
+	const mouseLeave = {
+		animationName: "mouseLeave",
+		backgroundColor: "transparent",
+		animationDuration: "200ms",
+		animationIterationCount: "1",
+	};
 	return (
 		<div
 			className="User"
-			style={{ backgroundColor: `${background}` }}
+			style={hovAnim}
 			onMouseOver={() => {
-				setBackround("red");
+				setHovAnim(mouseOver);
 			}}
 			onMouseLeave={() => {
-				setBackround("");
+				setHovAnim(mouseLeave);
 			}}
 		>
 			<div
