@@ -1,4 +1,7 @@
-import "./main.css";
+import "./Main.css";
+import Empty from "../components/Empty";
+// import chatWindow from "../components/chatWindow";
+
 const Main = () => {
 	return (
 		<main className="main">

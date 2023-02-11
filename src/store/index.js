@@ -1,10 +1,7 @@
-import { reducer } from "../reducers/index";
-import { contacts } from "../static-data";
+import reducer from "../reducers/index";
 import { legacy_createStore } from "redux";
 
 // second argument in createStore function is initialState obj.
-// Here it is set to be contacts obj
-
-const store = legacy_createStore(reducer, { contacts });
+const store = legacy_createStore(reducer);
 
 export default store;

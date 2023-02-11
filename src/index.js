@@ -12,7 +12,7 @@ const root = createRoot(container);
 
 root.render(
 	<React.StrictMode>
-		{/* {fancyLog()} */}
+		{fancyLog()}
 		<Provider store={store}>
 			<App />
 		</Provider>
