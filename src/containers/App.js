@@ -9,7 +9,7 @@ function App() {
 	const { contacts, user, activeUserId } = store.getState();
 	return (
 		<div className="App">
-			<Sidebar contacts={_.values(contacts.contacts)} />
+			<Sidebar contacts={_.values(contacts)} />
 			<Main user={user} activeUserId={activeUserId} />
 		</div>
 	);
