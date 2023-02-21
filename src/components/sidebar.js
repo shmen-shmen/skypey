@@ -4,7 +4,6 @@ import "./Sidebar.css";
 
 const Sidebar = (props) => {
 	const contacts = props.contacts;
-	// console.log(contacts);
 	return (
 		<aside className="Sidebar">
 			{contacts.map((contact) => {

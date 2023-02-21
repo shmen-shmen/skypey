@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import store from "./store/index";
 import App from "./containers/App";
+// import { ReactDOM } from "react-dom";
 // import registerServiceWorker from "./registerServiceWorker";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
@@ -27,10 +28,7 @@ function fancyLog() {
 // below is old way to subscribe store, it didn't work
 // every time the store is updated, the render() function is invoked
 
-// const render = () => {
-// 	fancyLog();
-// 	return root.render(<App />);
-// };
+// const render = () => ReactDOM.render(<App />, container);
 // render();
 // store.subscribe.render();
 

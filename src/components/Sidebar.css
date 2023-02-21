@@ -3,7 +3,8 @@
 	border: 8px double var(--toxic-blue);
 	height: 100%;
 	color: white;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	padding: 1rem;
 }
 

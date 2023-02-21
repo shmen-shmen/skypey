@@ -1,7 +1,10 @@
 import { useState } from "react";
+import store from "../store";
+import { setActiveUserId } from "../actions";
 
 export default ({ user }) => {
 	const { name, profile_pic, status } = user;
+
 	const [hovAnim, setHovAnim] = useState({});
 	const mouseOver = {
 		animationName: "mouseOver",
@@ -15,6 +18,11 @@ export default ({ user }) => {
 		animationDuration: "200ms",
 		animationIterationCount: "1",
 	};
+
+	const handleUserClick = ({ user_id }) => {
+		store.dispatch(setActiveUserId(user_id));
+	};
+
 	return (
 		<div
 			className="User"
@@ -25,6 +33,7 @@ export default ({ user }) => {
 			onMouseLeave={() => {
 				setHovAnim(mouseLeave);
 			}}
+			onClick={handleUserClick.bind(null, user)}
 		>
 			<div
 				className="User-pic"

@@ -1,4 +1,3 @@
-export default () => {
-	console.log("this is ChatWindow");
-	return <h2 style={{ color: "red" }}>this is ChatWindow</h2>;
+export default ({ activeUserId }) => {
+	return <h2 style={{ color: "red" }}>conversation with: {activeUserId}</h2>;
 };
