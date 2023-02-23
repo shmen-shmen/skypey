@@ -1,0 +1,29 @@
+.active-user-info {
+	background: linear-gradient(transparent 90%, var(--nice-blue));
+	color: white;
+	min-height: 7rem;
+	border-bottom: 2px solid var(--nice-blue);
+	color: var(--toxic-blue);
+	position: sticky;
+	top: 1.5rem;
+	width: 100%;
+}
+
+.active-user-info > * {
+	margin: 0 1rem 0 1rem;
+}
+
+.active-user-name {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+}
+.active-user-name h2 {
+	display: inline;
+	color: red;
+	font-size: 1.5rem;
+}
+
+.active-user-status {
+	margin-top: 1rem;
+	opacity: 70%;
+}

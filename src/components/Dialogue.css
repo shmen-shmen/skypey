@@ -1,0 +1,35 @@
+.dialogue {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.dialogue > div {
+	width: 45%;
+	/* color: var(--toxic-blue); */
+	display: flex;
+	flex-direction: row;
+	margin: 0.5rem 1rem 0.5rem 1rem;
+	color: black;
+	text-align: justify;
+}
+.pureStyle {
+	color: white;
+	padding-top: 0.5rem;
+}
+.isUserMsg_true {
+	align-self: flex-end;
+	/* background: linear-gradient(to top, var(--nice-blue), transparent 5%); */
+}
+
+.isUserMsg_false {
+	align-self: flex-start;
+	/* background: linear-gradient(to top, var(--nice-blue), transparent 5%); */
+}
+
+.message-text {
+	color: var(--toxic-blue);
+	display: inline;
+	/* background: white; */
+	padding: 0.5rem;
+}

@@ -46,8 +46,6 @@
 	margin-left: 1rem;
 	text-align: justify;
 	color: var(--toxic-blue);
-}
-.Empty-status span {
 	line-height: 2rem;
 	font-size: 1rem;
 	opacity: 70%;

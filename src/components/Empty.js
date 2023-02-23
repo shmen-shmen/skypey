@@ -15,7 +15,7 @@ export default ({ user, activeUserId }) => {
 				<div className="Empty-status">
 					{/* Name: <span>{name}</span> */}
 					{/* <br /> */}
-					<span>{status}</span>
+					{status}
 				</div>
 			</div>
 			<button className="Empty__btn">Start a conversation...</button>
