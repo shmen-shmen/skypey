@@ -10,11 +10,12 @@ export default ({ activeUserId }) => {
 	const state = store.getState();
 	const activeUser = state.contacts[activeUserId];
 	const activeMessages = state.messages[activeUserId];
+	const { typing } = state;
 	return (
 		<div className="obshenie">
 			<Header user={activeUser} />
 			<Chats messages={_.values(activeMessages)}></Chats>
-			<MessageInput />
+			<MessageInput value={typing} />
 		</div>
 	);
 };

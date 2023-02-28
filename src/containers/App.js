@@ -18,9 +18,11 @@ function App(props) {
 
 const mapStateToProps = (state) => {
 	return {
-		contacts: state.contacts,
 		user: state.user,
+		messages: state.messages,
+		contacts: state.contacts,
 		activeUserId: state.activeUserId,
+		typing: state.typing,
 	};
 };
 
