@@ -1,0 +1,50 @@
+.chats {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.chats > div {
+	width: 55%;
+	display: flex;
+	flex-direction: row;
+	margin: 0.5rem 1rem 0.5rem 1rem;
+	color: black;
+	text-align: justify;
+}
+
+.message-arrow {
+	color: white;
+	padding-top: 0.5rem;
+}
+
+.isUserMsg_true {
+	align-self: flex-end;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, var(--deep-blue));
+}
+
+.isUserMsg_false {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 40%, var(--nice-blue));
+	background-color: var(--nice-blue-translucent);
+	align-self: flex-start;
+}
+
+.message-text {
+	color: white;
+	display: inline;
+	padding: 0.5rem;
+	font-size: 1.1rem;
+}
+
+@media (max-width: 576px) {
+	.chats > div {
+		margin: 0;
+		margin-top: 1.5rem;
+		width: 90%;
+		font-size: 1rem;
+	}
+	.message-text {
+		padding: 0.5rem;
+		font-size: 1rem;
+	}
+}

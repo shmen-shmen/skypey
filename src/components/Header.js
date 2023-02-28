@@ -22,6 +22,7 @@ const Header = ({ user }) => {
 				{status}
 				{/* style={{ display: statusDisplay }} */}
 			</p>
+			<div className="header-bottom-shader"></div>
 		</header>
 	);
 };

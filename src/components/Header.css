@@ -1,12 +1,12 @@
 .active-user-info {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: 0.25rem 0 0.25rem 0;
+	height: 200px;
 	background: linear-gradient(transparent 90%, var(--nice-blue));
-	color: white;
-	min-height: 7rem;
 	border-bottom: 2px solid var(--nice-blue);
 	color: var(--toxic-blue);
-	position: sticky;
-	top: 1.5rem;
-	width: 100%;
 }
 
 .active-user-info > * {
@@ -14,9 +14,9 @@
 }
 
 .active-user-name {
-	margin-top: 1rem;
 	font-size: 1.5rem;
 }
+
 .active-user-name h2 {
 	display: inline;
 	color: red;
@@ -24,6 +24,15 @@
 }
 
 .active-user-status {
-	margin-top: 1rem;
 	opacity: 70%;
+}
+
+.header-bottom-shader {
+	height: 2rem;
+	background-color: red;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: -1rem;
+	background: linear-gradient(to bottom, black, transparent);
 }

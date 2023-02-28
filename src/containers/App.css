@@ -1,9 +1,9 @@
 html {
 	--toxic-blue: rgb(39, 248, 255);
 	--deep-blue: rgb(0, 34, 63);
-	--nice-blue-translucent: rgba(0, 74, 138, 0.8);
+	--nice-blue-translucent: rgba(0, 74, 138, 0.5);
 	--nice-blue: rgba(0, 74, 138, 1);
-	--deep-blue-translucent: rgb(0, 34, 63, 0.5);
+	--deep-blue-translucent: rgb(0, 34, 63, 0.8);
 }
 
 body {

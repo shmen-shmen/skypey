@@ -1,3 +1,9 @@
 .obshenie {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 16px);
+}
+.obshenie > * {
+	flex: 1 1 auto;
 }

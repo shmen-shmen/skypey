@@ -1,16 +1,13 @@
-import _ from "lodash";
-import "../components/Dialogue.css";
+import "../components/Chats.css";
 
 const Dialogue = ({ messages }) => {
-	messages = _.values(messages);
-
 	return (
-		<section className="dialogue">
+		<section className="chats">
 			{messages.map((message) => {
 				const isUserMsg = message.is_user_msg.toString();
 				return (
-					<div className={"isUserMsg_" + isUserMsg}>
-						<p className="pureStyle">{">"}</p>
+					<div className={"isUserMsg_" + isUserMsg} key={message.number}>
+						{/* <p className="message-arrow">{">"}</p> */}
 						<span className="message-text">{message.text}</span>
 					</div>
 				);

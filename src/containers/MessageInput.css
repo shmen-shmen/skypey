@@ -1,0 +1,54 @@
+.message-input-wrapper {
+	width: 100%;
+	background: linear-gradient(
+		to bottom,
+		var(--nice-blue),
+		var(--deep-blue-translucent) 1rem,
+		var(--deep-blue-translucent) calc(100% - 1rem),
+		var(--nice-blue)
+	);
+	min-height: 100px;
+	position: sticky;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.message-input-wrapper > * {
+	flex: 1 1 auto;
+}
+
+.message-input-textarea {
+	width: 100%;
+	height: auto;
+	padding: 0.5rem 0.5rem 0.5rem 0;
+	border: none;
+	color: white;
+	background-color: transparent;
+}
+.message-input-textarea:focus,
+textarea:focus {
+	outline: none;
+}
+
+.message-input-wrapper label {
+	padding: 0.5rem;
+	font-size: 1.1rem;
+	color: var(--toxic-blue);
+}
+
+/* .message-send-btn {
+	border: none;
+	color: white;
+	color: var(--toxic-blue);
+	height: 100%;
+	background-color: transparent;
+	text-align: left;
+	width: fit-content;
+}
+.message-send-btn span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0.5rem;
+} */
