@@ -19,7 +19,7 @@
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, var(--deep-blue));
 }
 .isUserMsg_true .message-remove-btn {
-	left: -1rem;
+	left: 0;
 }
 
 .isUserMsg_false {
@@ -27,8 +27,8 @@
 	background-color: var(--nice-blue-translucent);
 	align-self: flex-start;
 }
-.isUserMsg_false .message-remove-btn {
-	right: -1rem;
+.isUserMsg_false .message-actions-wrapper {
+	right: 0;
 }
 
 .message-text {
@@ -38,13 +38,36 @@
 	font-size: 1.1rem;
 }
 
-.message-remove-btn {
+.message-menu-wrapper {
+	display: flex;
+	flex-direction: row;
 	position: absolute;
 	background-color: var(--toxic-blue);
-	color: black;
-	width: 1rem;
-	font-size: 2rem;
+	font-size: 1rem;
 	text-align: center;
+	padding: 0.25rem;
+}
+.message-menu-btn:hover {
+	color: var(--toxic-blue);
+	background-color: var(--deep-blue);
+}
+.message-remove-btn {
+	background-color: var(--toxic-blue);
+	color: black;
+	text-align: center;
+}
+.message-remove-btn:hover {
+	color: var(--toxic-blue);
+	background-color: var(--deep-blue);
+}
+.message-edit-btn {
+	background-color: var(--toxic-blue);
+	color: black;
+	text-align: center;
+}
+.message-edit-btn:hover {
+	color: var(--toxic-blue);
+	background-color: var(--deep-blue);
 }
 
 @media (max-width: 576px) {

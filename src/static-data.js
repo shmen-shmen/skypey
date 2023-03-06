@@ -31,7 +31,7 @@ export function generateUser(i) {
 	return {
 		name: faker.name.findName(),
 		email: faker.internet.email(),
-		profile_pic: `avatars/image${i}.jpg`,
+		profile_pic: process.env.PUBLIC_URL + `/avatars/image${i}.jpg`,
 		status: txtgen.sentence(),
 		user_id: shortid.generate(),
 	};
