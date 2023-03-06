@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/skypey/static/css/main.78bbeac6.css",
+    "main.js": "/skypey/static/js/main.230ca518.js",
+    "static/js/787.1b9aaced.chunk.js": "/skypey/static/js/787.1b9aaced.chunk.js",
+    "static/media/Web437_IBM_DOS_ISO9.woff": "/skypey/static/media/Web437_IBM_DOS_ISO9.02ce57d033d06c83ddbe.woff",
+    "index.html": "/skypey/index.html",
+    "main.78bbeac6.css.map": "/skypey/static/css/main.78bbeac6.css.map",
+    "main.230ca518.js.map": "/skypey/static/js/main.230ca518.js.map",
+    "787.1b9aaced.chunk.js.map": "/skypey/static/js/787.1b9aaced.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78bbeac6.css",
+    "static/js/main.230ca518.js"
+  ]
+}
