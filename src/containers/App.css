@@ -1,35 +1,20 @@
-html {
+:root {
 	--toxic-blue: rgb(39, 248, 255);
 	--deep-blue: rgb(0, 34, 63);
 	--nice-blue-translucent: rgba(0, 74, 138, 0.5);
 	--nice-blue: rgba(0, 74, 138, 1);
 	--deep-blue-translucent: rgb(0, 34, 63, 0.8);
+
+	--for-phone-only: 599px;
+	--for-tablet-portrait-up: 600px;
+	--for-tablet-landscape-up: 900px;
+	--for-desktop-up: 1200px;
+	--for-big-desktop-up: 1800px;
 }
 
 body {
-	/* height: 100%; */
 	background: linear-gradient(black 30%, var(--deep-blue));
 }
-
-/* .stacked-radial {
-	background: radial-gradient(
-			circle at 50% 0,
-			rgba(255, 0, 0, 0.5),
-			rgba(255, 0, 0, 0) 70.71%
-		),
-		radial-gradient(
-			circle at 6.7% 75%,
-			rgba(0, 0, 255, 0.5),
-			rgba(0, 0, 255, 0) 70.71%
-		),
-		radial-gradient(
-				circle at 93.3% 75%,
-				rgba(0, 255, 0, 0.5),
-				rgba(0, 255, 0, 0) 70.71%
-			)
-			beige;
-	border-radius: 50%;
-} */
 
 .App {
 	display: flex;

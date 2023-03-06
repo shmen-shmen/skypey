@@ -6,16 +6,21 @@ import { connect } from "react-redux";
 
 import "./MessageInput.css";
 
-const MessageInput = ({ typing }) => {
+const MessageInput = () => {
+	const state = store.getState();
+	const { typing, activeUserId } = state;
+
 	const handleChange = (e) => {
 		store.dispatch(setTypingValue(e.target.value));
 	};
+
 	const handleSubmit = (e) => {
 		if (e.keyCode === 13 && (e.metaKey || e.ctrlKey)) {
-			store.dispatch(sendMessage(store.getState()["activeUserId"], typing));
+			store.dispatch(sendMessage(activeUserId, typing));
 			store.dispatch(setTypingValue(""));
 		}
 	};
+
 	return (
 		<div className="message-input-wrapper">
 			<label htmlFor="msgInput">Message: </label>
@@ -28,7 +33,6 @@ const MessageInput = ({ typing }) => {
 				value={typing}
 				placeholder={"Press Cmd + Enter (Ctrl + Enter on Win) to send message"}
 			></textarea>
-			{/* <button className="message-send-btn">SEND MESSAGE</button> */}
 		</div>
 	);
 };

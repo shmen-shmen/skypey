@@ -3,10 +3,12 @@
 	top: 0;
 	width: 100%;
 	padding: 0.25rem 0 0.25rem 0;
-	height: 200px;
+	min-height: 100px;
+	max-height: 100px;
 	background: linear-gradient(transparent 90%, var(--nice-blue));
 	border-bottom: 2px solid var(--nice-blue);
 	color: var(--toxic-blue);
+	/* overflow-y: scroll; */
 }
 
 .active-user-info > * {

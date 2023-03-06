@@ -1,19 +1,11 @@
 .Sidebar {
-	width: 120px;
+	width: 366px;
 	border: 8px double var(--toxic-blue);
 	height: 100%;
 	color: white;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	padding: 1rem;
-}
-
-/* not small devices  */
-/* это ПОТОМ давай уже пусть сначала прога заработает */
-@media (min-width: 1080px) {
-	.Sidebar {
-		width: 366px;
-	}
 }
 
 .User {
@@ -71,14 +63,26 @@
 }
 
 /* not small devices  */
-/* @media (min-width: 576px) {
-	.User__details {
-		display: block;
-		padding: 0 0 0 1rem;
+@media (max-width: 900px) {
+	.Sidebar {
+		width: 150px;
 	}
-	.User__details-name {
-		margin: 0;
-		color: red;
+
+	.User {
+		flex-direction: column;
+		background: linear-gradient(rgba(0, 74, 138, 0.8) 50%, transparent);
+	}
+
+	.User-info {
+		padding: 0;
+	}
+
+	.User-name h3 {
+		width: fit-content;
 		font-size: 1rem;
 	}
-} */
+
+	.User-status {
+		display: none;
+	}
+}

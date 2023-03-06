@@ -11,16 +11,15 @@
 	margin: 0.5rem 1rem 0.5rem 1rem;
 	color: black;
 	text-align: justify;
-}
-
-.message-arrow {
-	color: white;
-	padding-top: 0.5rem;
+	position: relative;
 }
 
 .isUserMsg_true {
 	align-self: flex-end;
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, var(--deep-blue));
+}
+.isUserMsg_true .message-remove-btn {
+	left: -1rem;
 }
 
 .isUserMsg_false {
@@ -28,12 +27,24 @@
 	background-color: var(--nice-blue-translucent);
 	align-self: flex-start;
 }
+.isUserMsg_false .message-remove-btn {
+	right: -1rem;
+}
 
 .message-text {
 	color: white;
 	display: inline;
 	padding: 0.5rem;
 	font-size: 1.1rem;
+}
+
+.message-remove-btn {
+	position: absolute;
+	background-color: var(--toxic-blue);
+	color: black;
+	width: 1rem;
+	font-size: 2rem;
+	text-align: center;
 }
 
 @media (max-width: 576px) {

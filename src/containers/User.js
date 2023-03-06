@@ -46,7 +46,8 @@ export default ({ user }) => {
 					<h3>{name}</h3>
 				</div>
 				<div />
-				<span className="User-status">{status}</span>
+				<div className="User-status">{status}</div>
+				{/* <span className="User-status"></span> */}
 			</div>
 		</div>
 	);
