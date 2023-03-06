@@ -27,21 +27,21 @@ const Message = ({ message, messageRemover }) => {
 		>
 			{removeBtnId === message.number ? (
 				<div className="message-menu-wrapper" onClick={messageMenu}>
-					<span className="message-menu-btn">[...]</span>
+					<button className="message-btn message-menu-btn">[...]</button>
 					{showMessageMenu ? (
 						<>
-							<div
-								className="message-edit-btn"
+							<button
+								className="message-btn message-edit-btn"
 								onClick={() => messageRemover(message.number)}
 							>
 								[edit]
-							</div>
-							<div
-								className="message-remove-btn"
+							</button>
+							<button
+								className="message-btn message-remove-btn"
 								onClick={() => messageRemover(message.number)}
 							>
 								[delete]
-							</div>
+							</button>
 						</>
 					) : null}
 				</div>

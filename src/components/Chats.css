@@ -18,7 +18,7 @@
 	align-self: flex-end;
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, var(--deep-blue));
 }
-.isUserMsg_true .message-remove-btn {
+.isUserMsg_true .message-menu-wrapper {
 	left: 0;
 }
 
@@ -27,7 +27,7 @@
 	background-color: var(--nice-blue-translucent);
 	align-self: flex-start;
 }
-.isUserMsg_false .message-actions-wrapper {
+.isUserMsg_false .message-menu-wrapper {
 	right: 0;
 }
 
@@ -40,12 +40,18 @@
 
 .message-menu-wrapper {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	position: absolute;
 	background-color: var(--toxic-blue);
 	font-size: 1rem;
 	text-align: center;
 	padding: 0.25rem;
+	width: fit-content;
+}
+.message-btn {
+	background-color: transparent;
+	border: none;
+	text-align: left;
 }
 .message-menu-btn:hover {
 	color: var(--toxic-blue);
@@ -54,7 +60,6 @@
 .message-remove-btn {
 	background-color: var(--toxic-blue);
 	color: black;
-	text-align: center;
 }
 .message-remove-btn:hover {
 	color: var(--toxic-blue);
@@ -63,7 +68,6 @@
 .message-edit-btn {
 	background-color: var(--toxic-blue);
 	color: black;
-	text-align: center;
 }
 .message-edit-btn:hover {
 	color: var(--toxic-blue);
