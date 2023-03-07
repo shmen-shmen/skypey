@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/skypey/static/css/main.d70b3eb5.css",
-    "main.js": "/skypey/static/js/main.fbbe40a0.js",
+    "main.css": "/skypey/static/css/main.23c7cc56.css",
+    "main.js": "/skypey/static/js/main.62357950.js",
     "static/js/787.1b9aaced.chunk.js": "/skypey/static/js/787.1b9aaced.chunk.js",
     "static/media/Web437_IBM_DOS_ISO9.woff": "/skypey/static/media/Web437_IBM_DOS_ISO9.02ce57d033d06c83ddbe.woff",
     "index.html": "/skypey/index.html",
-    "main.d70b3eb5.css.map": "/skypey/static/css/main.d70b3eb5.css.map",
-    "main.fbbe40a0.js.map": "/skypey/static/js/main.fbbe40a0.js.map",
+    "main.23c7cc56.css.map": "/skypey/static/css/main.23c7cc56.css.map",
+    "main.62357950.js.map": "/skypey/static/js/main.62357950.js.map",
     "787.1b9aaced.chunk.js.map": "/skypey/static/js/787.1b9aaced.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d70b3eb5.css",
-    "static/js/main.fbbe40a0.js"
+    "static/css/main.23c7cc56.css",
+    "static/js/main.62357950.js"
   ]
 }
