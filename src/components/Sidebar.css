@@ -55,7 +55,7 @@
 	color: var(--toxic-blue);
 }
 
-.User-status {
+.User-last-message {
 	display: flex;
 	overflow: hidden;
 	text-align: left;
@@ -82,7 +82,7 @@
 		font-size: 1rem;
 	}
 
-	.User-status {
+	.User-last-message {
 		display: none;
 	}
 }

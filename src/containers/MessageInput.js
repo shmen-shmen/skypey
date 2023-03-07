@@ -1,14 +1,18 @@
 import React from "react";
 import store from "../store";
-import { setTypingValue } from "../actions/index";
-import { sendMessage } from "../actions/index";
+import {
+	sendMessage,
+	editMessage,
+	setTypingValue,
+	setEditingValue,
+} from "../actions/index";
 import { connect } from "react-redux";
 
 import "./MessageInput.css";
 
 const MessageInput = () => {
 	const state = store.getState();
-	const { typing, activeUserId } = state;
+	const { typing, editing, activeUserId } = state;
 
 	const handleChange = (e) => {
 		store.dispatch(setTypingValue(e.target.value));
@@ -16,8 +20,14 @@ const MessageInput = () => {
 
 	const handleSubmit = (e) => {
 		if (e.keyCode === 13 && (e.metaKey || e.ctrlKey)) {
-			store.dispatch(sendMessage(activeUserId, typing));
-			store.dispatch(setTypingValue(""));
+			if (editing) {
+				store.dispatch(editMessage(activeUserId, editing, typing));
+				store.dispatch(setEditingValue(false));
+				store.dispatch(setTypingValue(""));
+			} else {
+				store.dispatch(sendMessage(activeUserId, typing));
+				store.dispatch(setTypingValue(""));
+			}
 		}
 	};
 

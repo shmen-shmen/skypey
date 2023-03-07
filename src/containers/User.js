@@ -1,9 +1,12 @@
 import { useState } from "react";
 import store from "../store";
 import { setActiveUserId } from "../actions";
+import _ from "lodash";
 
 export default ({ user }) => {
-	const { name, profile_pic, status } = user;
+	const { name, profile_pic, status, user_id } = user;
+	const messagesArr = _.values(store.getState()["messages"][user_id]);
+	const lastMessage = messagesArr[messagesArr.length - 1]["text"];
 
 	const [hovAnim, setHovAnim] = useState({});
 	const mouseOver = {
@@ -46,8 +49,7 @@ export default ({ user }) => {
 					<h3>{name}</h3>
 				</div>
 				<div />
-				<div className="User-status">{status}</div>
-				{/* <span className="User-status"></span> */}
+				<div className="User-last-message">{lastMessage}</div>
 			</div>
 		</div>
 	);

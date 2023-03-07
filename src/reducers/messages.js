@@ -1,5 +1,9 @@
 import { getMessages } from "../static-data";
-import { SEND_MESSAGE, REMOVE_MESSAGE } from "../constants/action-types";
+import {
+	SEND_MESSAGE,
+	REMOVE_MESSAGE,
+	EDIT_MESSAGE,
+} from "../constants/action-types";
 
 const numberOfMessages = Math.round(Math.random() * 20);
 
@@ -22,6 +26,12 @@ export default function messages(
 			const { msgNumber, activeUserId } = action.payload;
 			const activeDialogue = state[activeUserId];
 			delete activeDialogue[msgNumber];
+			return { ...state, [activeUserId]: activeDialogue };
+		}
+		case EDIT_MESSAGE: {
+			const { activeUserId, msgNumber, msgText } = action.payload;
+			const activeDialogue = state[activeUserId];
+			activeDialogue[msgNumber]["text"] = msgText;
 			return { ...state, [activeUserId]: activeDialogue };
 		}
 

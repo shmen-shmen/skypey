@@ -4,7 +4,11 @@ import _ from "lodash";
 import store from "../store";
 import { connect } from "react-redux";
 import Message from "../components/Message";
-import { removeMessage } from "../actions/index";
+import {
+	removeMessage,
+	setTypingValue,
+	setEditingValue,
+} from "../actions/index";
 
 const Chats = ({ activeUserId }) => {
 	const state = store.getState();
@@ -12,6 +16,10 @@ const Chats = ({ activeUserId }) => {
 
 	const messageRemover = (messageNumber) => {
 		store.dispatch(removeMessage(activeUserId, messageNumber));
+	};
+	const messageEditor = (messageText, messageNumber) => {
+		store.dispatch(setTypingValue(messageText));
+		store.dispatch(setEditingValue(messageNumber));
 	};
 
 	const chatWindowRef = useRef(null);
@@ -26,6 +34,7 @@ const Chats = ({ activeUserId }) => {
 					<Message
 						key={message.number.toString().concat(message.is_user_msg)}
 						messageRemover={messageRemover}
+						messageEditor={messageEditor}
 						message={message}
 					/>
 				);

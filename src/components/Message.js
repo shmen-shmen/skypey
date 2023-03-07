@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import _ from "lodash";
 
-const Message = ({ message, messageRemover }) => {
+const Message = ({ message, messageRemover, messageEditor }) => {
 	const [removeBtnId, setRemoveBtnId] = useState("");
 	const [showMessageMenu, setshowMessageMenu] = useState(false);
 
@@ -32,7 +32,7 @@ const Message = ({ message, messageRemover }) => {
 						<>
 							<button
 								className="message-btn message-edit-btn"
-								onClick={() => messageRemover(message.number)}
+								onClick={() => messageEditor(message.text, message.number)}
 							>
 								[edit]
 							</button>
