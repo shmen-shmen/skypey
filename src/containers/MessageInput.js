@@ -25,8 +25,10 @@ const MessageInput = () => {
 				store.dispatch(setEditingValue(false));
 				store.dispatch(setTypingValue(""));
 			} else {
-				store.dispatch(sendMessage(activeUserId, typing));
-				store.dispatch(setTypingValue(""));
+				if (typing) {
+					store.dispatch(sendMessage(activeUserId, typing));
+					store.dispatch(setTypingValue(""));
+				}
 			}
 		}
 	};
