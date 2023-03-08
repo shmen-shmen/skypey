@@ -7,6 +7,7 @@ import {
 	setEditingValue,
 } from "../actions/index";
 import { connect } from "react-redux";
+import { useState } from "react";
 
 import "./MessageInput.css";
 
@@ -32,10 +33,36 @@ const MessageInput = () => {
 			}
 		}
 	};
+	const cancelEditing = () => {
+		store.dispatch(setEditingValue(false));
+		store.dispatch(setTypingValue(""));
+		setEditingSubmenu("EDITING");
+	};
+
+	const [editingSubMenu, setEditingSubmenu] = useState("EDITING");
+	const showEitingSubmenu = () => {
+		setEditingSubmenu("CANCEL EDITING");
+	};
+	const hideEitingSubmenu = () => {
+		setEditingSubmenu("EDITING");
+	};
 
 	return (
 		<div className="message-input-wrapper">
-			<label htmlFor="msgInput">Message: </label>
+			<>
+				{editing ? (
+					<span
+						className="message-input-label message-input-editing"
+						onMouseOver={showEitingSubmenu}
+						onMouseLeave={hideEitingSubmenu}
+						onClick={cancelEditing}
+					>
+						{editingSubMenu}:
+					</span>
+				) : (
+					<div className="message-input-label">MESSAGE:</div>
+				)}
+			</>
 			<textarea
 				type="text"
 				className="message-input-textarea"
@@ -56,6 +83,7 @@ const mapStateToProps = (state) => {
 		contacts: state.contacts,
 		activeUserId: state.activeUserId,
 		typing: state.typing,
+		editing: state.editing,
 	};
 };
 

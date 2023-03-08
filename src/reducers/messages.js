@@ -32,6 +32,7 @@ export default function messages(
 			const { activeUserId, msgNumber, msgText } = action.payload;
 			const activeDialogue = state[activeUserId];
 			activeDialogue[msgNumber]["text"] = msgText;
+			activeDialogue[msgNumber]["edited"] = true;
 			return { ...state, [activeUserId]: activeDialogue };
 		}
 

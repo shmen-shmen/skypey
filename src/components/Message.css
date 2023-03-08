@@ -1,0 +1,81 @@
+.message {
+	width: 55%;
+	/* display: flex; */
+	/* flex-direction: row; */
+	margin: 0.5rem 1rem 0.5rem 1rem;
+	color: black;
+	text-align: justify;
+	position: relative;
+}
+
+.isUserMsg_true {
+	align-self: flex-end;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, var(--deep-blue));
+}
+
+.isUserMsg_false {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 40%, var(--nice-blue));
+	background-color: var(--nice-blue-translucent);
+	align-self: flex-start;
+}
+
+.message-text {
+	color: white;
+	font-size: 1.1rem;
+}
+.message-edited {
+	color: rgba(255, 0, 0, 1);
+	font-size: 0.75rem;
+}
+
+.message-menu-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--toxic-blue);
+	font-size: 1rem;
+	text-align: center;
+	padding: 0.25rem;
+	width: fit-content;
+}
+.message-btn {
+	background-color: transparent;
+	border: none;
+	text-align: left;
+}
+.message-menu-btn:hover {
+	color: var(--toxic-blue);
+	background-color: var(--deep-blue);
+}
+.message-remove-btn {
+	background-color: var(--toxic-blue);
+	color: black;
+}
+.message-remove-btn:hover {
+	color: var(--toxic-blue);
+	background-color: var(--deep-blue);
+}
+.message-edit-btn {
+	background-color: var(--toxic-blue);
+	color: black;
+}
+.message-edit-btn:hover {
+	color: var(--toxic-blue);
+	background-color: var(--deep-blue);
+}
+
+@media (max-width: 576px) {
+	.chats > div {
+		margin: 0;
+		margin-top: 1.5rem;
+		width: 90%;
+		font-size: 1rem;
+	}
+	.message-text {
+		padding: 0.5rem;
+		font-size: 1rem;
+	}
+}

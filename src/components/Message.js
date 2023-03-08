@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import _ from "lodash";
-
+import "./Message.css";
 const Message = ({ message, messageRemover, messageEditor }) => {
 	const [removeBtnId, setRemoveBtnId] = useState("");
 	const [showMessageMenu, setshowMessageMenu] = useState(false);
@@ -21,13 +21,18 @@ const Message = ({ message, messageRemover, messageEditor }) => {
 
 	return (
 		<div
-			className={"isUserMsg_" + isUserMsg}
+			className={"message" + " " + `${"isUserMsg_" + isUserMsg}`}
 			onMouseOver={() => showMessageRemoveBtn(message.number)}
 			onMouseLeave={() => hideMessageRemoveBtn()}
 		>
 			{removeBtnId === message.number ? (
-				<div className="message-menu-wrapper" onClick={messageMenu}>
-					<button className="message-btn message-menu-btn">[...]</button>
+				<div className="message-menu-wrapper">
+					<button
+						className="message-btn message-menu-btn"
+						onClick={messageMenu}
+					>
+						[...]
+					</button>
 					{showMessageMenu ? (
 						<>
 							<button
@@ -47,6 +52,9 @@ const Message = ({ message, messageRemover, messageEditor }) => {
 				</div>
 			) : null}
 			<span className="message-text">{message.text}</span>
+			{message.edited ? (
+				<span className="message-text message-edited">[edited]</span>
+			) : null}
 		</div>
 	);
 };
